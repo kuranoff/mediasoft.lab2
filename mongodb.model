@@ -1,0 +1,32 @@
+db.datasets.insert({
+   _id: <ObjectId>,
+   uuid: UUID
+   locale: <string>,
+   multilang: <string> [experimental],
+   labels: [ <string array> ],
+   size: <integer>,
+   dimension: <integer>,
+   algorithm: <string>,
+   model: [ <string array> ]
+   })
+
+db.vocub.insert({
+   _id: <ObjectId>,
+   uuid: UUID
+   word: <string>,
+   pos: <string>
+   })
+
+db.phases.insert({
+   _id: <ObjectId>,
+   dataset_uuid: <ObjectId>,
+   word_uuid: <ObjectId>,
+   phase: <integer> [experimental]
+   })
+
+db.vectors.insert({
+   _id: <ObjectId>,
+   dataset_uuid: <ObjectId>,
+   word_uuid: <ObjectId>,
+   vectors: <integer>
+   })
